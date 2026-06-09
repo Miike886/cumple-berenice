@@ -51,6 +51,36 @@
     });
   });
 
+  const tappableSelector = [
+    "button",
+    ".reason-card",
+    ".quiz-options button",
+    ".envelope-button",
+  ].join(",");
+
+  document.addEventListener(
+    "pointerdown",
+    (event) => {
+      if (event.pointerType === "mouse") return;
+      const target = event.target.closest(tappableSelector);
+      if (!target || target.disabled) return;
+      target.classList.add("is-tapping");
+    },
+    { passive: true }
+  );
+
+  ["pointerup", "pointercancel", "pointerleave"].forEach((eventName) => {
+    document.addEventListener(
+      eventName,
+      (event) => {
+        const target = event.target.closest(tappableSelector);
+        if (!target) return;
+        window.setTimeout(() => target.classList.remove("is-tapping"), 140);
+      },
+      { passive: true }
+    );
+  });
+
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -131,6 +161,8 @@
   const radioMessage = document.querySelector(".radio-message");
   document.querySelectorAll("[data-radio]").forEach((button) => {
     button.addEventListener("click", () => {
+      document.querySelectorAll("[data-radio]").forEach((item) => item.classList.remove("is-active"));
+      button.classList.add("is-active");
       radioMessage.textContent = button.dataset.radio;
       radioMessage.classList.remove("is-flashing");
       void radioMessage.offsetWidth;

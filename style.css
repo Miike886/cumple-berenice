@@ -34,6 +34,7 @@ body {
 
 button {
   font: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .section {
@@ -397,7 +398,11 @@ figure {
 }
 
 .celebration-button:hover,
-.shuffle-reasons:hover {
+.shuffle-reasons:hover,
+.celebration-button:active,
+.shuffle-reasons:active,
+.celebration-button.is-tapping,
+.shuffle-reasons.is-tapping {
   transform: translateY(-2px);
   box-shadow: 0 18px 42px rgba(173, 20, 87, 0.24);
 }
@@ -696,6 +701,19 @@ figure {
 .race-radio button:hover {
   transform: translateY(-2px);
   background: rgba(255, 128, 0, 0.22);
+}
+
+.race-radio button:active,
+.race-radio button.is-tapping,
+.race-radio button.is-active {
+  transform: translateY(0) scale(0.96);
+  background: var(--naranja-f1);
+  color: #111;
+  box-shadow: 0 0 22px rgba(255, 128, 0, 0.36);
+}
+
+.race-radio button.is-active {
+  transform: translateY(-1px);
 }
 
 .radio-message {
@@ -1084,14 +1102,22 @@ figure {
   overflow-wrap: anywhere;
 }
 
-.reason-card:hover .card-front,
 .reason-card.is-flipped .card-front {
   transform: rotateY(180deg);
 }
 
-.reason-card:hover .card-back,
 .reason-card.is-flipped .card-back {
   transform: rotateY(360deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .reason-card:hover .card-front {
+    transform: rotateY(180deg);
+  }
+
+  .reason-card:hover .card-back {
+    transform: rotateY(360deg);
+  }
 }
 
 .reason-icon {
@@ -1393,8 +1419,35 @@ figure {
 
 .quiz-options button:hover,
 .restart-quiz:hover,
-.show-all-reasons:hover {
+.show-all-reasons:hover,
+.quiz-options button:active,
+.restart-quiz:active,
+.show-all-reasons:active,
+.quiz-options button.is-tapping,
+.restart-quiz.is-tapping,
+.show-all-reasons.is-tapping {
   transform: translateY(-2px);
+}
+
+.quiz-options button:active,
+.quiz-options button.is-tapping,
+.restart-quiz:active,
+.restart-quiz.is-tapping,
+.show-all-reasons:active,
+.show-all-reasons.is-tapping {
+  background: var(--rosa-principal);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(173, 20, 87, 0.18);
+}
+
+.envelope-button:active,
+.envelope-button.is-tapping {
+  transform: translateY(-6px) scale(0.96);
+}
+
+.reason-card.is-tapping {
+  transform: scale(0.98);
+  filter: drop-shadow(0 12px 24px rgba(173, 20, 87, 0.2));
 }
 
 .quiz-options button.is-correct {
