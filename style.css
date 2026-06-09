@@ -28,6 +28,8 @@ body {
   color: var(--ink);
   font-family: "DM Sans", system-ui, sans-serif;
   overflow-x: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 button {
@@ -1783,6 +1785,37 @@ figure {
 }
 
 @media (max-width: 699px) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .lando-section {
+    align-items: flex-start;
+    min-height: auto;
+    padding-top: max(112px, calc(env(safe-area-inset-top) + 88px));
+    padding-bottom: max(74px, env(safe-area-inset-bottom));
+  }
+
+  .lando-inner {
+    gap: 20px;
+  }
+
+  .lando-copy {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .lando-copy h2 {
+    font-size: clamp(2rem, 11vw, 3.15rem);
+    max-width: 10ch;
+  }
+
+  .lando-copy > p:not(.f1-kicker) {
+    max-width: 20rem;
+    font-size: clamp(1rem, 5vw, 1.35rem);
+    line-height: 1.35;
+  }
+
   .reason-card[data-extra="true"] {
     display: none;
   }
@@ -1792,10 +1825,72 @@ figure {
   }
 
   .telemetry-card {
-    top: 12px;
-    right: 12px;
-    transform: scale(0.86);
-    transform-origin: top right;
+    position: absolute;
+    top: max(14px, env(safe-area-inset-top));
+    left: 50%;
+    right: auto;
+    z-index: 4;
+    grid-template-columns: repeat(3, auto auto);
+    width: min(100%, 360px);
+    min-width: 0;
+    margin: 0;
+    padding: 9px 10px;
+    gap: 4px 8px;
+    transform: translateX(-50%);
+    font-size: 0.64rem;
+  }
+
+  .telemetry-card strong {
+    font-size: 0.76rem;
+  }
+
+  .helmet-showcase {
+    width: min(74vw, 300px);
+    margin-block: 2px 0;
+  }
+
+  .radio-message {
+    width: min(100%, 360px);
+    padding: 12px 12px;
+    font-size: clamp(0.95rem, 4.5vw, 1.08rem);
+    line-height: 1.45;
+  }
+
+  .motorsport-grid {
+    width: min(100%, 360px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 12px;
+    margin-top: 6px;
+  }
+
+  .motorsport-card {
+    min-height: 88px;
+  }
+
+  .senna-card {
+    grid-column: 1 / -1;
+    grid-template-columns: 72px 1fr;
+    justify-content: center;
+    max-width: 245px;
+    margin: 0 auto;
+  }
+
+  .senna-card img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .logo-card img {
+    width: 88px;
+    height: 42px;
+  }
+
+  .motorsport-card strong {
+    font-size: 0.92rem;
+  }
+
+  .mini-scroll {
+    display: none;
   }
 }
 
@@ -1923,10 +2018,27 @@ figure {
 
   .motorsport-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 8px;
   }
 
   .senna-card {
     grid-column: 1 / -1;
+  }
+
+  .lando-copy h2 {
+    font-size: clamp(1.75rem, 10vw, 2.65rem);
+  }
+
+  .lando-copy > p:not(.f1-kicker) {
+    font-size: clamp(0.95rem, 4.7vw, 1.16rem);
+  }
+
+  .radio-message {
+    width: min(100%, 340px);
+  }
+
+  .logo-card img {
+    width: 76px;
   }
 
   .game-shelf {

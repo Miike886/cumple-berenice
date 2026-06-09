@@ -334,32 +334,4 @@
     burstConfetti(["#f48fb1", "#ad1457", "#ff8700", "#00e5ff"], { particleCount: 180, spread: 95 });
   });
 
-  let touchStartY = 0;
-  let touchStartX = 0;
-
-  window.addEventListener(
-    "touchstart",
-    (event) => {
-      const firstTouch = event.touches[0];
-      touchStartY = firstTouch.clientY;
-      touchStartX = firstTouch.clientX;
-    },
-    { passive: true }
-  );
-
-  window.addEventListener(
-    "touchend",
-    (event) => {
-      if (event.target.closest(".letter-paper")) return;
-      const changedTouch = event.changedTouches[0];
-      const deltaY = touchStartY - changedTouch.clientY;
-      const deltaX = touchStartX - changedTouch.clientX;
-      if (Math.abs(deltaY) < 80 || Math.abs(deltaY) < Math.abs(deltaX) * 1.35) return;
-
-      const activeIndex = dots.findIndex((dot) => dot.classList.contains("is-active"));
-      const nextIndex = Math.min(sections.length - 1, Math.max(0, activeIndex + (deltaY > 0 ? 1 : -1)));
-      sections[nextIndex]?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-    },
-    { passive: true }
-  );
 })();
