@@ -1,1 +1,44 @@
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ratoncita kawaii</title>
+  <desc id="desc">Ratoncita rosa con lentes lila, lazo, bigotes y patitas.</desc>
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#ad1457" flood-opacity=".15"/>
+    </filter>
+  </defs>
+  <g filter="url(#softShadow)">
+    <path d="M287 286c44 16 72 5 86-25 12-27 2-59-20-74" fill="none" stroke="#f48fb1" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="138" cy="110" r="68" fill="#f8bbd0"/>
+    <circle cx="282" cy="110" r="68" fill="#f8bbd0"/>
+    <circle cx="138" cy="110" r="43" fill="#f48fb1" opacity=".55"/>
+    <circle cx="282" cy="110" r="43" fill="#f48fb1" opacity=".55"/>
+    <ellipse cx="210" cy="220" rx="122" ry="135" fill="#fce4ec" stroke="#f8bbd0" stroke-width="8"/>
+    <ellipse cx="210" cy="262" rx="66" ry="70" fill="#fff8fb" opacity=".78"/>
+    <path d="M115 216c-27 10-47 28-58 53M324 216c26 10 46 28 57 53" fill="none" stroke="#f8bbd0" stroke-width="28" stroke-linecap="round"/>
+    <circle cx="59" cy="270" r="18" fill="#fce4ec" stroke="#f8bbd0" stroke-width="7"/>
+    <circle cx="379" cy="270" r="18" fill="#fce4ec" stroke="#f8bbd0" stroke-width="7"/>
+    <path d="M181 345c-16 20-37 25-58 14M239 345c16 20 37 25 58 14" fill="none" stroke="#f8bbd0" stroke-width="22" stroke-linecap="round"/>
+    <circle cx="121" cy="356" r="22" fill="#fce4ec" stroke="#f8bbd0" stroke-width="7"/>
+    <circle cx="299" cy="356" r="22" fill="#fce4ec" stroke="#f8bbd0" stroke-width="7"/>
+    <path d="M112 362h-18M123 371l-13 13M288 371l13 13M310 362h18" stroke="#f48fb1" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="164" cy="202" rx="22" ry="28" fill="#33222c"/>
+    <ellipse cx="256" cy="202" rx="22" ry="28" fill="#33222c"/>
+    <circle cx="155" cy="192" r="8" fill="#fff"/>
+    <circle cx="247" cy="192" r="8" fill="#fff"/>
+    <circle cx="172" cy="212" r="5" fill="#fff" opacity=".85"/>
+    <circle cx="264" cy="212" r="5" fill="#fff" opacity=".85"/>
+    <path d="M143 178c-12-12-26-13-39-2M277 178c12-12 26-13 39-2" fill="none" stroke="#33222c" stroke-width="6" stroke-linecap="round"/>
+    <path d="M121 183l-13-16M294 183l13-16" stroke="#33222c" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="160" cy="204" r="42" fill="none" stroke="#9c27b0" stroke-width="8"/>
+    <circle cx="252" cy="204" r="42" fill="none" stroke="#9c27b0" stroke-width="8"/>
+    <path d="M202 203c8-5 15-5 22 0M118 199l-39-16M118 212l-41 4M118 224l-35 23M302 199l39-16M302 212l41 4M302 224l35 23" fill="none" stroke="#9c27b0" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="210" cy="234" rx="14" ry="10" fill="#f48fb1"/>
+    <path d="M210 244c-1 19-22 25-35 10M210 244c1 19 22 25 35 10" fill="none" stroke="#ad1457" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="122" cy="245" r="20" fill="#f48fb1" opacity=".42"/>
+    <circle cx="298" cy="245" r="20" fill="#f48fb1" opacity=".42"/>
+    <path d="M71 238h86M76 256h77M80 219h73M263 238h86M267 256h77M267 219h73" stroke="#77717c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M128 64c-26-23-50-19-67 2 19 4 35 15 48 32z" fill="#e91e8c"/>
+    <path d="M132 66c31-14 52-4 62 22-20-3-40 3-58 18z" fill="#f48fb1"/>
+    <circle cx="128" cy="72" r="17" fill="#ad1457"/>
+  </g>
+</svg>
